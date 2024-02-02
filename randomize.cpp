@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() { 
+int Random(int start = 0 , int end = 6){
     FILE *fp ;
     time_t now;
 
@@ -12,10 +12,16 @@ int main() {
     struct tm *localTime = localtime(&now);
 
     int seconds = localTime->tm_sec;
-    int random = seconds % 6 + 1 ;
-
-    //cout  << random << endl ;  
+    int random = seconds % end + start ;
 
     fprintf(fp,"%d\n",random);
     fclose(fp);
+
+    return random ; 
+}
+
+int main() { 
+   int x ; 
+   x = Random();
+   cout << x <<endl;
 }
