@@ -1,27 +1,26 @@
 #include <iostream>
-#include <ctime>
+#include <chrono>
 
 using namespace std;
+using namespace chrono;
 
-int Random(int start = 0 , int end = 6){
-    FILE *fp ;
-    time_t now;
+int Random(int start = 1, int end = 6) {
+    //FILE *fp ;
+    //fp = fopen("Sample.txt", "a+");
 
-    fp = fopen("Sample.txt","a+");
-    now = time(NULL);
-    struct tm *localTime = localtime(&now);
+    auto microSeconds = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+    int random = microSeconds % end + start;
 
-    int seconds = localTime->tm_sec;
-    int random = seconds % end + start ;
+    //fprintf(fp, "%d\n",random);
+    //fclose(fp);
 
-    fprintf(fp,"%d\n",random);
-    fclose(fp);
-
-    return random ; 
+    return random;
 }
 
-int main() { 
-   int x ; 
-   x = Random();
-   cout << x <<endl;
+int main() {
+    int x;
+    x = Random();
+    cout << x << endl;
+
+    return 0;
 }
