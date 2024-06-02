@@ -1,8 +1,8 @@
-**
+***
 
 ## This Randomizer project is build with the time seed method
 
-**
+***
 
 ## **Demo**
 
