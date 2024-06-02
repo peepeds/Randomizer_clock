@@ -3,30 +3,24 @@ This Randomizer project is build with the time seed method
 ---
 Demo
 
-Init demo : https://youtu.be/Flag261Xi8I 
-
-link demo in line 6 for me it's got enough to submitted as solution. As my Explanation say that "We can     delete the 2 slash / comments if we want to see the output. May be that Demo not be accepted because It'S can be consider that the demo / solution is not Transparant enough  to say that the data at Sample.txt is the data we gets from that demo. So Allow me not to Delete the past demo link. 
-
-revision demo : https://youtu.be/KtxYbc0f6xE
+V 1.0.0 demo : https://youtu.be/KtxYbc0f6xE
 
 ---
 Explanation
-I not sure I can Explained it perfectly with English , so I will Explained it with Bahasa 
 
-Fungsi Randomizer / penghasil angka acak ini dijalankan menggunakan sistem  waktu saat ini sebagai "seed" untuk menghasilkan berapa angka yang akan dihasilkan nantinya
+The Randomizer function, which generates random numbers, runs using the current system time as a "seed" to determine the number that will be generated later.
 
-Angka adalah waktu yang berjalan terus menerus dan kita sulit menentukan secara eksak nilai dari angka waktu saat ini karena tidak ada batasnya , terutama karena menggunakan waktu berjalan berdasarkan EPOCH
+Time is a continuously running value, and it's difficult to determine the exact value of the current time because it has no limit, especially when using time based on EPOCH.
 
-Operator Modulo digunakan untuk menentukan berapa jumlah angka yang akan dihasilkan , oleh karena itu modulo sebagai rentang / range untuk hasil pengacakan yang diinginkan (end). Setelah rentang di dapatkan kita hanya perlu mengeset / mengatur dari angka berapa rentang tersebut akan dimulai(start)
+The modulo operator is used to determine the number of numbers that will be generated, with modulo acting as the range for the desired randomization result (end). Once the range is obtained, we only need to set the starting point for that range (start).
 
-Secara Singkat.
-Kode ini dibangun berdasarkan 2 aspek , waktu dan modulo
-1. Waktu
-   Waktu digunakan untuk membangun Seed / Faktor Pengacak. Nilainya selalu berubah setiap saat dan tidak ada secara eksak nilai / waktu saat program dijalankan 
+In summary:
+1. Time
+   Time is used to build the Seed or Randomization Factor. Its value is constantly changing, and there is no exact value or time when the program is running.
 2. Modulo
-   Modulo digunakan untuk menentukan rentang angka yang diinginkan. 
-   Variable start digunakan untuk menampung nilai awal yang ingin dikeluarkan
-   Variable end digunakan untuk menampung batas akhir yang ingin dikeluarkan
-3. Keacakan 
-    time sebagai seeder memastikan nilai seed selalu dan pasti berubah setiap waktu. Ini berarti setiap kali program dijalankan, nilai seednya akan berbeda, memberikan variasi acak  pada hasil pengacakan.
-    Submission kali ini juga menjamin faktor pengacakan lebih baik. Hal ini disebabkan Seeder di upgrade dari tingkat Second ke micro second. Sehingga bila program di jalankan di device yang berbeda akan memiliki dua jaminan pengacakan. yang pertama hampir mustahil bahwa program dijalankan bersamaan sampai presisi micro second , yang kedua seeder diambil melibatkan faktor perangkat user juga , kecepatan CPU mempengaruhi seeder yang dihasilkan , disebabkan allokasi thread dan RAM saat itu juga mempengaruhi seberapa cepat program dijalankan dan seed didapat.  
+   Modulo is used to determine the desired range of numbers.
+   The variable 'start' is used to hold the initial value to be output.
+   The variable 'end' is used to hold the end limit to be output.
+3. Randomness
+    Time as a seeder ensures that the seed value always changes every time. This means that every time the program is executed, the seed value will be different, providing random variation in the randomization results.
+    This submission also ensures better randomization factors. This is because the Seeder is upgraded from the level of seconds to microseconds. So, when the program is executed on different devices, there are two guarantees of randomization. Firstly, it's almost impossible for the program to be executed simultaneously up to microsecond precision. Secondly, the seeder involves user device factors as well; CPU speed affects the generated seeder, as thread allocation and RAM at that time also affect how fast the program runs and the seed obtained.
