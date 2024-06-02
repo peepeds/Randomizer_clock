@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /Users/ed282828/Documents/Randomizer_clock 
+./run.sh randomize.cpp
