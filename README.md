@@ -1,12 +1,12 @@
-***
 
 ## This Randomizer project is build with the time seed method
 
-***
+
 
 ## **Demo**
 
 V 1.0.0 demo : https://youtu.be/KtxYbc0f6xE
+V 2.1.0 demo : https://youtu.be/-DEPX3iQW80
 
 
 ## Explanation
